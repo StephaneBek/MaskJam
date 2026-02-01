@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bylasfjm8dg3s"]
+
+[ext_resource type="Script" uid="uid://c37gm5rdsuduv" path="res://scripts/Player.gd" id="1_s6dok"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v6fml"]
+
+[node name="Scene" type="Node2D" unique_id=1221971611]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1579895311]
+script = ExtResource("1_s6dok")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1084110728]
+
+[node name="BodySprite" type="Sprite2D" parent="Player" unique_id=630090094]
+
+[node name="MaskSprite" type="Sprite2D" parent="Player" unique_id=1944603030]
+visible = false
+
+[node name="ProximityArea" type="Area2D" parent="Player" unique_id=1676508716]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/ProximityArea" unique_id=1418582788]
+shape = SubResource("CircleShape2D_v6fml")
+disabled = true
+metadata/radius = 64
